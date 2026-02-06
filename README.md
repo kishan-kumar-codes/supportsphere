@@ -1,77 +1,74 @@
-# SupportSphere ![Build Status](https://img.shields.io/badge/build-passing-brightgreen) ![Version](https://img.shields.io/badge/version-1.0.0-blue)
+# Project Setup for Web App
 
-## Project Description
-SupportSphere is an intelligent customer support platform that leverages AI to analyze customer queries and prioritize support tickets in real-time. It integrates seamlessly with a knowledge base to provide agents with contextual suggestions, enhancing response times and customer satisfaction.
+# README.md
+# This file serves as the initial documentation for the web app project.
 
-## Features
-- 🤖 AI-driven customer query analysis
-- ⏱️ Real-time support ticket prioritization
-- 📚 Integrated knowledge base suggestions
+# Project Title: Web App
+# Description: A web application using Node.js, Next.js, PostgreSQL, Prisma, Redis, and OpenAI Agent SDK.
 
-## Tech Stack
-### Frontend
-- **Next.js** 🌐
+# Getting Started
 
-### Backend
-- **Node.js** 🚀
-- **OpenAI Agent SDK** 🧠
-
-### Database
-- **PostgreSQL** 🗄️
-- **Prisma** 🔗
-
-### Caching
-- **Redis** 🧊
+## Prerequisites
+- Node.js (v14 or later)
+- PostgreSQL
+- Redis
+- npm or yarn
 
 ## Installation
-To set up the project locally, follow these steps:
 
-- Clone the repository
-bash
-git clone https://github.com/kishan-kumar-codes/supportsphere.git
-- Navigate into the project directory
-bash
-cd supportsphere
-- Install the dependencies
-bash
-npm install
-- Set up your environment variables (create a `.env` file based on `.env.example`)
-bash
-cp .env.example .env
-- Run the database migrations
-bash
-npx prisma migrate dev
-- Start the development server
-bash
-npm run dev
-## Usage
-Once the server is running, you can access the application at `http://localhost:3000`. Follow the on-screen instructions to set up your customer support environment.
+1. Clone the repository:
+   git clone <repository-url>
 
-## API Documentation
-For detailed API documentation, please refer to the [API Docs](https://github.com/kishan-kumar-codes/supportsphere/wiki/API-Documentation).
+2. Navigate to the project directory:
+   cd <project-directory>
 
-## Testing
-To run the tests, use the following command:
-bash
-npm test
-## Deployment
-For deploying the application, follow these steps:
+3. Install dependencies:
+   npm install
 
-- Build the application
-bash
-npm run build
-- Start the production server
-bash
-npm start
-- Ensure your environment variables are set correctly for production.
+## Database Setup
+
+1. Create a PostgreSQL database:
+   CREATE DATABASE <database-name>;
+
+2. Update the `.env` file with your database credentials:
+   DATABASE_URL="postgresql://<username>:<password>@localhost:5432/<database-name>"
+
+3. Run Prisma migrations:
+   npx prisma migrate dev --name init
+
+## Running the Application
+
+1. Start the development server:
+   npm run dev
+
+2. Open your browser and navigate to:
+   http://localhost:3000
+
+## Scripts
+
+- `dev`: Starts the development server.
+- `build`: Builds the application for production.
+- `start`: Starts the production server.
 
 ## Contributing
-We welcome contributions! Please follow these guidelines:
 
 1. Fork the repository.
-2. Create a new branch (`git checkout -b feature/YourFeature`).
-3. Make your changes and commit them (`git commit -m 'Add some feature'`).
-4. Push to the branch (`git push origin feature/YourFeature`).
-5. Open a Pull Request.
+2. Create a new branch:
+   git checkout -b feature/YourFeature
+3. Commit your changes:
+   git commit -m 'Add some feature'
+4. Push to the branch:
+   git push origin feature/YourFeature
+5. Open a pull request.
 
-Thank you for considering contributing to SupportSphere!
+## License
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## Acknowledgments
+- OpenAI for the Agent SDK
+- Prisma for ORM
+- Next.js for the React framework
+- PostgreSQL for the database
+- Redis for caching
+
+# End of README.md
